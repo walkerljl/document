@@ -1,0 +1,15 @@
+1、解压:
+ $ unzip site-1.6.10.zip -d /export/plugin/site-1.6.10
+2、创建配置文件
+ $ sudo mkdir /home/jarvis/tool/eclipse/links
+ $ cd links
+ $ sudo gedit svn-plugin.link 输入如下内容:
+   path=/export/plugin/site-1.6.10
+3、解决问题
+ $ sudo apt-get install libsvn-java
+ $ sudo gedit /export/tool/eclipse/eclipse.ini
+ 在-vmargs下添加以下两行内容：
+  -Djava.library.path=/usr/share/java/
+  -Djava.library.path=/usr/lib/x86_64-linux-gnu/jni/
+ 需要说明的是第二行是64位系统的库位置，如果是32位的话，位置为/usr/lib/i386-linux-gnu/jni/
+4、$ sudo gedit ~/.subversion/config，添加如下行：password-stores=

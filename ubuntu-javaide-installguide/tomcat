@@ -1,0 +1,8 @@
+1、解压
+ $ sudo tar -zxvf apache-tomcat-6.0.35.tar.gz -C /export/server/
+2、配置
+ $ sudo gedit /export/server/apache-tomcat-6.0.35/bin/catalina.sh
+ 添加配置：JAVA_HOME=/usr/lib/jvm/jdk1.6.0_45
+3、启动，验证。
+ $ sudo ./startup.sh
+ 浏览器输入：localhost:8080
