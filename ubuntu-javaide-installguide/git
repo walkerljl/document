@@ -1,0 +1,28 @@
+linux下软件的安装方式有多种，最简单的莫过于从软件中心直接安装了或者用命令行直接安装
+
+sudo apt-get install git
+       但是这样的安装却使我们体会不到最新版本的功能，如果我们想要体验最新的，或者修改源代码，就必须编译安装了。我们可以直接在git 的官网
+
+上下载并安装。
+       编译之前，我们必须首先安装以下软件，否则会编译不通过。
+
+sudo apt-get install libcurl4-openssl-dev  libexpat1-dev 
+安装完后我们边可以编译了，当然编译之前我们必须进入源码所在的目录，至于怎么进，大家就自己解决吧，进入后执行下面命令进行编译：
+
+
+make prefix=/usr/local all    
+最后执行
+
+sudo make prefix=/usr/local install
+进行安装。
+     最高明的方法还是我们自己在本地克隆一个git版本库，当然前提是你自己已经安装了git的否则的话，这种方发你是用不了的，克隆版本库：
+
+    首先进入你要存放的目录，当然也可以不进入，git clone 默认的第二个参数就是你的路径，省略的话就是你当前的路径：
+
+ 
+
+git clone git://git.kernel.org/pub/scm/git/git.git
+克隆后默认会检出（checkout）当前最新的代码当然你也可以装以往的版本,执行下面命令可以检查出历史所有的版本
+
+git tag
+

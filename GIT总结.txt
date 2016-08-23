@@ -1,0 +1,29 @@
+克隆版本库
+	git clone https://github.com/walkerljl/commons.github
+修改，增加所有文件
+	git add .
+将所有改动提交到缓存区
+	git add --a
+提交到本地仓库
+	git commit -m "change log"
+创建分支v0.0.1
+	git branch v0.0.1
+从master切换到分支v0.0.1
+	git checkout v0.0.1
+创建并且换到分支v0.0.2
+	git checkout -b v0.0.2
+查看当前分支状态，前面带*表示未合并到master上
+	git branch
+查看分支及当前修改过的文件
+	git status
+将分支v0.0.1合并到master上,如产生冲突，需要手动解决。
+	git merge v0.0.1
+删除分支v0.0.1,如果还未合并到master，则会出现不能删除提示，用-D可以强制删除
+	git branch -d v0.0.1
+查看分支的最后修改，分支前带*的为还为合并分支到master分支的，无*的为已经合并到master中，可以将无*的分支删除掉。
+	git branch -v 
+
+	
+	http://www.ruanyifeng.com/blog/2012/07/git.html
+	
+	http://www.cnblogs.com/mengdd/p/3447464.html
