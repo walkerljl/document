@@ -1,0 +1,18 @@
+1.解压 Eclipse
+ $ tar -zxvf eclipse.tar.gz -C /export/tool/
+2.创建 Eclipse 快捷方式
+ (1)$ sudo gedit /usr/share/applications/eclipse.desktop
+ (2)粘贴并保存如下内容
+  [Desktop Entry]
+  Name=Eclipse 4
+  Type=Application
+  Exec=/export/tool/eclipse/eclipse
+  Terminal=false
+  Icon=/export/tool/eclipse/icon.xpm
+  Comment=Integrated Development Environment
+  NoDisplay=false
+  Categories=Development;IDE;
+  Name[en]=Eclipse
+
+安装完成
+

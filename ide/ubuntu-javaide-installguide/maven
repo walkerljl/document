@@ -1,0 +1,9 @@
+1、解压到指定路径
+ $ sudo unzip apache-maven-2.2.1-bin.zip -d /export/tool/
+2、配置环境变量 $ sudo gedit /etc/profile，添加如下变量
+ M2_HOME=/export/tool/apache-maven-2.2.1
+ export MAVEN_OPTS="-Xms256m -Xmx512m"
+ export PATH=$M2_HOME/bin:$PATH 
+3、刷新环境变量
+ $ source /etc/profile
+4、配置settings.xml
